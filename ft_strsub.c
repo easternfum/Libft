@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:57:01 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/12 14:44:52 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:16:17 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *result;
-	size_t i;
-	size_t x;
+	char	*result;
+	size_t	i;
+	size_t	x;
 
 	x = len - start;
 	result = (char *)malloc(sizeof(char) * (x + 1));

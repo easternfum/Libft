@@ -6,15 +6,15 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:48:42 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:09:48 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 11:07:49 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int x)
 {
-	char *p;
+	char	*p;
 
 	p = (char *) str;
 	while (*p != x)

@@ -6,11 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:45:04 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:06:45 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 11:08:59 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
@@ -18,7 +18,8 @@ int	ft_isalnum(int c)
 	{
 		return (1);
 	}
-	else{
+	else
+	{
 		return (0);
 	}
 }

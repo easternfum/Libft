@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:48:33 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/15 13:16:16 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:12:40 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
-char 	**ft_strsplit(char const *s, char c);				xxxxxx
-char	*ft_itoa(int n);          xxxxxxx
+char 	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
 void	ft_putchar(char a);
 void	ft_putstr(const char *s);
 void	ft_putendl(char const *s);

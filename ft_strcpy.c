@@ -6,11 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:36:42 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:10:17 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 11:10:13 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

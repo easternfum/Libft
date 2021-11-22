@@ -6,18 +6,18 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:44:00 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:07:20 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 11:06:52 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int x, size_t len)
 {
-	unsigned char *p1;
-	unsigned char *p2;
+	unsigned char	*p1;
+	unsigned char	*p2;
 
-	p1 = (unsigned char*)str;
+	p1 = (unsigned char *)str;
 	p2 = NULL;
 	while ((str != NULL) && (len--))
 	{

@@ -18,17 +18,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 		p1[i] = p2[i];
 		i++;
 	}
-	p1[i] = '\0';
+	//p1[i] = '\0';
 	return (p1);
 }
 
 int main(void)
 {
-	char a[50];
-	char c[] = "This is a string to test it out.";
+	char a[22];
+	char b[22];
+	char c[] = "test basic du memcpy !";
 
-	printf("memcpy: %s\n", memcpy(a, c, 4));
-	printf("ft_memcpy: %s\n", ft_memcpy(a, c, 4));
+	printf("memcpy: %s\n", memcpy(a, c, 6));
+	printf("ft_memcpy: %s\n", ft_memcpy(b, c, 6));
 
 	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 09:59:28 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:06:38 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 11:05:41 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

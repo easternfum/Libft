@@ -28,11 +28,7 @@ char	*ft_strrchr(const char *str, int x)
 	{
 		if (p[i] == x)
 		{
-			flag = 1;
-			if (flag == 1)
-			{
-				return (&p[i]);
-			}
+			return (&p[i]);
 		}
 		i--;
 	}	

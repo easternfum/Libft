@@ -6,11 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:19:54 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:11:57 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 11:10:40 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str);
 

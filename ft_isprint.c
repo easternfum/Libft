@@ -6,15 +6,15 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:15:25 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:07:02 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/22 10:54:15 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}

@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:26:57 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:10:34 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 10:42:51 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	ft_memdel(void **ap);
 
 void	ft_strdel(char **as)
 {
-	ft_memdel((void**)as);
+	ft_memdel((void **)as);
 }

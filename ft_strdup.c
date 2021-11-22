@@ -6,11 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:54:50 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:10:48 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 11:10:20 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *src)
 {

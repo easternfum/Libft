@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:12:46 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:11:05 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 10:43:40 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	if (s != '\0' || *s != '\0' || f != '\0')
 	{

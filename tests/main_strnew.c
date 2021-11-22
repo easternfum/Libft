@@ -15,7 +15,7 @@ char	*ft_strnew(size_t size)
 	p[size] = '\0';
 	while (size--)
 	{
-		p[size] = '\0';
+		p[size] = '\0';a
 	}
 	return (p);	
 }

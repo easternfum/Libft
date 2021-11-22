@@ -6,11 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:04:32 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:06:59 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/19 11:09:15 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

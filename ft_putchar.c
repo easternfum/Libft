@@ -6,11 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:41:50 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/10 13:07:40 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/22 13:43:20 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putchar(char a)
 {

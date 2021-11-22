@@ -29,7 +29,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 int main(void)
 {
 	char a[] = "A string to test it out.";
-	char *b = ft_strsub(a, 5, 15);
+	char *b = ft_strsub(a, 0, 5);
 
 	printf("%s\n", b);
 
