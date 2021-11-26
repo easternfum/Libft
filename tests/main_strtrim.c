@@ -24,9 +24,13 @@ int first_start(const char *str)
 	int i;
 
 	i = 0;
-	while (is_space(str[i]))
+	while (is_space(str[i]) && *str++)
 	{
 		i++;
+	}
+	if (i == (int)ft_strlen(str))
+	{
+		i = 0;
 	}
 	return (i);
 }
@@ -77,8 +81,10 @@ char	*ft_strtrim(char const *s)
 int main(void)
 {
 	char *a = "			String	that	need to 		trim.\n";
+	char *b = "          ";
 
-	printf("%s\n", ft_strtrim(a));
+	printf("Own: %s\n", ft_strtrim(a));
+	printf("Own: %s\n", ft_strtrim(b));
 
 
 	return(0);
