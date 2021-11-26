@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:55:55 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/15 13:12:06 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/24 11:54:10 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	if (!*s1 || !*s2)
+	size_t	i;
+
+	i = 0;
+	if (s1 == NULL || s2 == NULL)
 	{
 		return (0);
 	}
-	while ((*s1 || *s2) && (*s1 == *s2))
+	while (s1[i] && s2[i])
 	{
-		s1++;
-		s2++;
+		if (s1[i] != s2[i])
+		{
+			return (0);
+		}		
+		i++;
 	}
-	if (*s1 == *s2)
-	{
-		return (1);
-	}
-	else
+	if (s1[i] != s2[i])
 	{
 		return (0);
 	}
+	return (1);
 }

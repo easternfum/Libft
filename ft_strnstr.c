@@ -6,26 +6,35 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:20:30 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 11:08:24 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/26 12:27:12 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *str1, const char *str2, size_t len);
-
-char	*ft_strnstr(const char *src, const char *word, size_t len)
+char	*ft_strnstr(const char *src, const char *word, size_t n)
 {
 	size_t	i;
-	char	*p;
+	size_t	j;
 
 	i = 0;
-	p = (char *) src;
-	while (i < len)
+	if (!*word)
 	{
-		if ((p[i] == *word) && (ft_strncmp(src, word, len)))
+		return ((char *)src);
+	}
+	while (src[i] && i < n)
+	{
+		j = 0;
+		if (src[i] == word[j])
 		{
-			return (&p[i]);
+			while (i + j < n && src[i + j] == word[j])
+			{
+				j++;
+				if (!word[j])
+				{
+					return ((char *)&src[i]);
+				}
+			}
 		}
 		i++;
 	}

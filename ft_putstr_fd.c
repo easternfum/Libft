@@ -6,13 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:05:05 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 10:41:14 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/25 14:52:48 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar_fd(char c, int fd);
 
 void	ft_putstr_fd(char const *s, int fd)
 {

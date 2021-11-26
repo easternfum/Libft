@@ -6,39 +6,36 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:57:34 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 10:45:09 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/26 13:38:51 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		size;
 	int		i;
 	int		j;
-	char	*p;
+	char	*result;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
-	size = ft_strlen(s1) + ft_strlen(s2);
-	p = (char *)malloc(sizeof(p) * size + 1);
-	if (p == NULL)
-	{
+	result = (char *)ft_memalloc(sizeof(char) * \
+	(ft_strlen(s1) + ft_strlen(s2)) + 1);
+	if (!result)
 		return (0);
-	}
-	while (s1[i] != '\0')
+	while (s1[i])
 	{
-		p[i] = s1[i];
+		result[i] = s1[i];
 		i++;
 	}
 	j = 0;
-	while (s2[j] != '0')
+	while (s2[j])
 	{
-		p[i + j] = s2[j];
+		result[i++] = s2[j];
 		j++;
 	}
-	p[i + j] = '\0';
-	return (p);
+	result[i] = '\0';
+	return (result);
 }

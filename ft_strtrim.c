@@ -6,69 +6,65 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:58:04 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/11 11:18:32 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/26 12:29:51 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-
-int	is_space(char a)
+static int	is_space(char a)
 {
 	return (a == ' ' || a == '\t' || a == '\n');
 }
 
-int	first_start(const char *str)
+static int	first_start(const char *str)
 {
 	int	i;
 
 	i = 0;
-	while (is_space(str[i]))
+	while (str[i])
 	{
+		if (!is_space(str[i]))
+		{
+			return (i);
+		}
 		i++;
 	}
-	return (i);
+	return (-1);
 }
 
-int	last_end(const char *str)
+static int	last_end(const char *str)
 {
 	int	i;
 
 	i = ft_strlen(str) - 1;
-	while (is_space(str[i]))
+	while (i > 0)
 	{
+		if (!is_space(str[i]))
+		{
+			return (i);
+		}
 		i--;
 	}
-	return (i);
-}
-
-int	last_first(const char *str)
-{
-	return (last_end(str) - first_start(str));
+	return (-1);
 }
 
 char	*ft_strtrim(char const *s)
 {
 	char	*result;
-	int		i;
 	int		x;
 	int		y;
 
-	result = NULL;
-	if (*s != '\0')
+	if (!s)
 	{
-		i = 0;
-		y = last_first(s) + 1;
-		result = (char *)malloc(sizeof(result) * y);
-		x = first_start(s);
-		while (i < y)
-		{
-			result[i] = s[x];
-			i++;
-			x++;
-		}
-		result[i] = '\0';
+		return (0);
 	}
+	x = first_start(s);
+	y = last_end(s);
+	if (x == -1 || y == -1)
+	{
+		return (ft_strnew(0));
+	}
+	result = ft_strsub(s, x, (y - x) + 1);
 	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:39:10 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 10:43:29 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/26 13:18:43 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	char	*ptr;
-
-	if (s != "\0" || f != '\0')
+	if (!s)
 	{
 		return ;
-	}
-	ptr = s;
-	while (*ptr)
+	}	
+	while (*s)
 	{
-		f(ptr++);
+		f(s++);
 	}
 }

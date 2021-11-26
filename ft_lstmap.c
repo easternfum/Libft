@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 12:54:50 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/26 12:25:41 by kfum             ###   ########.fr       */
+/*   Created: 2021/11/25 11:09:20 by kfum              #+#    #+#             */
+/*   Updated: 2021/11/25 14:21:49 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*result;
-	size_t	i;
-	size_t	x;
+	t_list	*newlist1;
+	t_list	*newlist2;
 
-	x = ft_strlen(src);
-	result = (char *)ft_memalloc(sizeof(*src) * (x + 1));
-	if (!result)
+	if (!lst || !f)
 	{
 		return (0);
 	}
-	i = 0;
-	while (src[i] != '\0')
+	newlist1 = f(lst);
+	newlist2 = newlist1;
+	while (lst->next)
 	{
-		result[i] = src[i];
-		i++;
+		lst = lst->next;
+		newlist1->next = f(lst);
+		if (newlist1->next == NULL)
+		{
+			return (0);
+		}
+		newlist1 = newlist1->next;
 	}
-	result[i] = '\0';
-	return (result);
+	return (newlist2);
 }

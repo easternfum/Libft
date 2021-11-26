@@ -6,15 +6,13 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:29:30 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/22 11:57:03 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/25 14:41:20 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-
-void	*ft_memcpy(void *dest, const void *src, size_t len)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*p1;
 	unsigned char	*p2;
@@ -27,7 +25,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 	{
 		return (0);
 	}
-	while (i < len)
+	while (i < n)
 	{
 		p1[i] = p2[i];
 		i++;

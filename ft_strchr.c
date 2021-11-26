@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:48:42 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 11:07:49 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/26 12:26:12 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@ char	*ft_strchr(const char *str, int x)
 {
 	char	*p;
 
-	p = (char *) str;
+	p = (char *)str;
 	while (*p != x)
 	{
+		if (*p == '\0')
+		{
+			return (0);
+		}
 		p++;
 	}
 	return (p);

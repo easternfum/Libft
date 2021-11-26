@@ -6,17 +6,21 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:42:44 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/22 15:17:01 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/26 13:23:59 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *s)
+void	ft_putstr(const char *str)
 {
-	while (*s)
+	if (!str)
 	{
-		write(1, *(&s), 1);
-		s++;
+		return ;
+	}
+	while (*str)
+	{
+		write(1, *(&str), 1);
+		str++;
 	}
 }

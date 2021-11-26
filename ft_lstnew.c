@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 11:52:24 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/26 13:21:11 by kfum             ###   ########.fr       */
+/*   Created: 2021/11/25 11:05:33 by kfum              #+#    #+#             */
+/*   Updated: 2021/11/25 13:32:22 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	unsigned int	i;
-	char			*result;
+	t_list	*newlist;
 
-	i = 0;
-	if (!s || !f)
+	newlist = (t_list *)malloc(sizeof(*newlist));
+	if (!newlist)
 	{
 		return (0);
 	}
-	result = (char *)ft_memalloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!result)
+	if (!content)
 	{
-		return (0);
+		newlist->content = NULL;
+		newlist->content_size = 0;
 	}
-	while (s[i])
+	else
 	{
-		result[i] = f(i, s[i]);
-		i++;
+		newlist->content = malloc(content_size);
+		if (!newlist->content)
+		{
+			free (newlist);
+			return (0);
+		}
+		ft_memcpy(newlist->content, content, content_size);
+		newlist->content_size = content_size;
 	}
-	return (result);
+	newlist->next = NULL;
+	return (newlist);
 }

@@ -6,13 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:17:01 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 11:09:58 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/25 14:54:10 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str);
 
 char	*ft_strcat(char *dest, const char *src)
 {

@@ -6,21 +6,21 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:53:11 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 11:12:51 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/25 14:48:30 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void	*ft_memalloc(size_t size)
+
+void	*ft_memalloc(size_t n)
 {
 	char	*p;
 
-	p = (char *)malloc(sizeof(char)) * size);
-	if (p == NULL)
+	p = malloc(n);
+	if (!p)
 	{
 		return (0);
 	}
+	ft_bzero(p, n);
 	return (p);
 }
-*/

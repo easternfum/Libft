@@ -6,13 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:26:57 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 10:42:51 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/25 14:54:26 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_memdel(void **ap);
 
 void	ft_strdel(char **as)
 {

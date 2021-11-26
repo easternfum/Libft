@@ -6,35 +6,32 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:58:08 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/22 11:44:42 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/25 14:46:25 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t len)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	size_t			i;
+	unsigned char	*p1;
+	unsigned char	*p2;
 
 	i = 0;
-	j = 0;
-	while ((i < len) && (j < len))
+	p1 = (unsigned char *)str1;
+	p2 = (unsigned char *)str2;
+	if (!n)
 	{
-		if (str1[i] > str2[j])
-		{
-			return (-1);
-		}
-		else if (str1[i] < str2[j])
-		{
-			return (1);
-		}
-		else
-		{
-			return (0);
-		}
-		i++;
-		j++;
+		return (0);
 	}
-	return (0);
+	while ((p1[i] && p2[i]) && (p1[i] == p2[i]))
+	{
+		if (i == n - 1)
+		{
+			return (p1[i] - p2[i]);
+		}			
+		i++;
+	}
+	return (p1[i] - p2[i]);
 }

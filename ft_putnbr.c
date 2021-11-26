@@ -6,34 +6,32 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:08:27 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/19 10:40:53 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/25 14:51:18 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char a);
-
-void	ft_putnbr(int nbr)
+void	ft_putnbr(int x)
 {
-	if (nbr == -2147483648)
+	if (x == -2147483648)
 	{
 		ft_putchar('-');
 		ft_putchar('2');
 		ft_putnbr(147483648);
 	}
-	else if (nbr < 0)
+	else if (x < 0)
 	{
 		ft_putchar('-');
-		ft_putnbr(-nbr);
+		ft_putnbr(-x);
 	}
-	else if (nbr > 9)
+	else if (x > 9)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		ft_putnbr(x / 10);
+		ft_putnbr(x % 10);
 	}
 	else
 	{
-		ft_putchar(nbr + '0');
+		ft_putchar((char)x + '0');
 	}
 }

@@ -6,31 +6,37 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:57:01 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/22 15:16:17 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/26 13:15:39 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t n)
 {
 	char	*result;
 	size_t	i;
-	size_t	x;
 
-	x = len - start;
-	result = (char *)malloc(sizeof(char) * (x + 1));
-	if (!result)
+	i = 0;
+	if (!s)
 	{
 		return (0);
 	}
-	i = start;
-	while (i < len && (*(s + i) != '\0'))
+	if (start > ft_strlen(s))
 	{
-		*result = *(s + i);
-		result++;
+		return (0);
+	}
+	result = (char *)ft_memalloc(sizeof(char) * n + 1);
+	if (result == NULL)
+	{
+		return (0);
+	}
+	while (i < n)
+	{
+		result[i] = s[start];
+		start++;
 		i++;
 	}
-	*result = '\0';
-	return (result - x);
+	result[i] = '\0';
+	return (result);
 }

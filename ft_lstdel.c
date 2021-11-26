@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 12:54:50 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/26 12:25:41 by kfum             ###   ########.fr       */
+/*   Created: 2021/11/25 11:07:38 by kfum              #+#    #+#             */
+/*   Updated: 2021/11/25 13:46:05 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char	*result;
-	size_t	i;
-	size_t	x;
+	t_list	*newlist;
+	t_list	*templist;
 
-	x = ft_strlen(src);
-	result = (char *)ft_memalloc(sizeof(*src) * (x + 1));
-	if (!result)
+	templist = *alst;
+	while (templist)
 	{
-		return (0);
+		newlist = templist->next;
+		del(templist->content, templist->content_size);
+		free(templist);
+		templist = newlist;
 	}
-	i = 0;
-	while (src[i] != '\0')
-	{
-		result[i] = src[i];
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
+	*alst = NULL;
 }
