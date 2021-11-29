@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:45:59 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 14:48:58 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 11:19:26 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ char	*ft_strnew(size_t n)
 {
 	char	*p;
 
-	p = (char *)malloc(sizeof(char) * n + 1);
+	p = (char *)ft_memalloc(sizeof(char) * n + 1);
 	if (p == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 	p[n] = '\0';
 	while (n--)

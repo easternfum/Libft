@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:44:00 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 14:42:32 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 11:14:42 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memchr(const void *str, int x, size_t n)
 		i++;
 	}
 	str = NULL;
-	return (0);
+	return (NULL);
 }

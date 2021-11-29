@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:47:28 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 14:40:41 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 10:49:04 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	*ft_memset(void *str, int x, size_t n)
 	unsigned char	*p;
 
 	i = 0;
-	p = (unsigned char *) str;
+	p = (unsigned char *)str;
 	while (i < n)
 	{
-		p[i] = x;
+		p[i] = (unsigned char)x;
 		i++;
 	}
 	return (str);

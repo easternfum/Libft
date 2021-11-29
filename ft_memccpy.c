@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:02:09 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 15:04:59 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 11:14:12 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	*ft_memccpy(void *dest, const void *src, int x, size_t n)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 11:07:38 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 13:46:05 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 11:13:18 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	{
 		newlist = templist->next;
 		del(templist->content, templist->content_size);
-		free(templist);
+		free (templist);
 		templist = newlist;
 	}
 	*alst = NULL;

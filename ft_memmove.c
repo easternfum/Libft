@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:53:03 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/26 14:22:22 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 11:15:39 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 	p1 = (unsigned char *)str1;
 	p2 = (unsigned char *)str2;
 	if (!str1 && !str2)
-		return (0);
+		return (NULL);
 	if ((p1 - p2) < 0)
 	{
 		input_part1(p1, p2, i, n);

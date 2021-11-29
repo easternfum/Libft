@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:51:57 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/26 13:21:08 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 11:17:45 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	result = (char *)ft_memalloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!result)
 	{
-		return (0);
+		return (NULL);
 	}
 	p1 = (char *)s;
 	p2 = result;

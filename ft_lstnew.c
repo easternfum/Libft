@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 11:05:33 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 13:32:22 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 11:07:43 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*newlist;
 
-	newlist = (t_list *)malloc(sizeof(*newlist));
+	newlist = (t_list *)ft_memalloc(sizeof(*newlist));
 	if (!newlist)
 	{
 		return (0);
@@ -28,7 +28,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		newlist->content = malloc(content_size);
+		newlist->content = ft_memalloc(content_size);
 		if (!newlist->content)
 		{
 			free (newlist);

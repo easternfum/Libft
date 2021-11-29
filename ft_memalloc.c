@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:53:11 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 14:48:30 by kfum             ###   ########.fr       */
+/*   Updated: 2021/11/29 11:14:00 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memalloc(size_t n)
 	p = malloc(n);
 	if (!p)
 	{
-		return (0);
+		return (NULL);
 	}
 	ft_bzero(p, n);
 	return (p);
