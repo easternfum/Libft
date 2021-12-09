@@ -6,22 +6,11 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:53:03 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/29 11:15:39 by kfum             ###   ########.fr       */
+/*   Updated: 2021/12/08 11:35:15 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	input_part1(unsigned char *s1, unsigned char *s2, \
-size_t i, size_t n)
-{
-	while (i < n)
-	{
-		s1[i] = s2[i];
-		i++;
-	}
-	return (i);
-}
 
 void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
@@ -29,22 +18,22 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 	unsigned char	*p1;
 	unsigned char	*p2;
 
-	i = 0;
 	p1 = (unsigned char *)str1;
 	p2 = (unsigned char *)str2;
 	if (!str1 && !str2)
 		return (NULL);
-	if ((p1 - p2) < 0)
+	if (p1 < p2)
 	{
-		input_part1(p1, p2, i, n);
+		ft_memcpy(p1, p2, n);
 	}
 	else
 	{
-		while (n > 0)
+		i = n;
+		while (i > 0)
 		{
-			p1[n - 1] = p2[n - 1];
-			n--;
+			p1[i - 1] = p2[i - 1];
+			i--;
 		}
-	}	
+	}
 	return (p1);
 }

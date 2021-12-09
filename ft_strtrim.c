@@ -6,25 +6,20 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:58:04 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/26 12:29:51 by kfum             ###   ########.fr       */
+/*   Updated: 2021/12/08 14:19:31 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_space(char a)
-{
-	return (a == ' ' || a == '\t' || a == '\n');
-}
-
-static int	first_start(const char *str)
+static int	start_check(const char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (!is_space(str[i]))
+		if (!ft_isspace(str[i]))
 		{
 			return (i);
 		}
@@ -33,14 +28,14 @@ static int	first_start(const char *str)
 	return (-1);
 }
 
-static int	last_end(const char *str)
+static int	end_check(const char *str)
 {
 	int	i;
 
 	i = ft_strlen(str) - 1;
 	while (i > 0)
 	{
-		if (!is_space(str[i]))
+		if (!ft_isspace(str[i]))
 		{
 			return (i);
 		}
@@ -49,7 +44,7 @@ static int	last_end(const char *str)
 	return (-1);
 }
 
-char	*ft_strtrim(char const *s)
+char	*ft_strtrim(const char *s)
 {
 	char	*result;
 	int		x;
@@ -59,8 +54,8 @@ char	*ft_strtrim(char const *s)
 	{
 		return (0);
 	}
-	x = first_start(s);
-	y = last_end(s);
+	x = start_check(s);
+	y = end_check(s);
 	if (x == -1 || y == -1)
 	{
 		return (ft_strnew(0));

@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:48:56 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/26 12:27:55 by kfum             ###   ########.fr       */
+/*   Updated: 2021/12/08 11:03:11 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,27 @@
 
 int	ft_atoi(const char *str)
 {
-	int		i;
 	int		flag;
 	size_t	result;
 
-	i = 0;
 	result = 0;
 	flag = 1;
-	while (str[i] == '\t' || str[i] == ' ' || str[i] == '\n' || str[i] == '\r' \
-	|| str[i] == '\v' || str[i] == '\f' )
+	while (ft_isspace(*str) || *str == '\r' || *str == '\v' || *str == '\f' )
 	{
-		i++;
+		str++;
 	}
-	if (str[i] == '+' || str[i] == '-')
+	if (*str == '+' || *str == '-')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
+		{
 			flag = -1;
-		i++;
+		}			
+		str++;
 	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	while (*str && (*str >= '0' && *str <= '9'))
 	{
-		result = result * 10 + str[i] - '0';
-		i++;
+		result = (result * 10) + (*str - '0');
+		str++;
 	}	
 	return (flag * result);
 }

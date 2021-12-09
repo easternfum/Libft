@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:48:33 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/26 16:30:24 by kfum             ###   ########.fr       */
+/*   Updated: 2021/12/08 14:28:31 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ typedef struct s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+/*
+**************************PART 1********************************************
+*/
 
 void	*ft_memset(void *str, int x, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -52,6 +56,11 @@ int		ft_isascii(int x);
 int		ft_isprint(int x);
 int		ft_toupper(int x);
 int		ft_tolower(int x);
+
+/*
+**************************PART 2********************************************
+*/
+
 void	*ft_memalloc(size_t n);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t n);
@@ -59,28 +68,42 @@ void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-char	*ft_strmap(char const *s, char (*f)(char));
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int		ft_strequ(char const *s1, char const *s2);
-int		ft_strnequ(char const *s1, char const *s2, size_t n);
-char	*ft_strsub(char const *s, unsigned int start, size_t n);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s);
-char	**ft_strsplit(char const *s, char c);
+char	*ft_strmap(const char *s, char (*f)(char));
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
+char	*ft_strsub(const char *s, unsigned int start, size_t n);
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strtrim(const char *s);
+char	**ft_strsplit(const char *s, char c);
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(const char *str);
-void	ft_putendl(char const *str);
+void	ft_putendl(const char *str);
 void	ft_putnbr(int x);
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char const *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
+void	ft_putstr_fd(const char *s, int fd);
+void	ft_putendl_fd(const char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
+
+/*
+**************************BONUS PART********************************************
+*/
+
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+**************************OWN FUNCTION PART********************************************
+*/
+
+int		ft_isspace(char c);
+int		ft_abs(int x);
+void	ft_strrev(char *str);
+void	ft_swap(void *v1, void *v2);
 
 #endif

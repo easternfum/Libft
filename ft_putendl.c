@@ -6,13 +6,13 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:20:21 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 14:50:34 by kfum             ###   ########.fr       */
+/*   Updated: 2021/12/08 11:36:49 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *str)
+void	ft_putendl(const char *str)
 {
 	ft_putstr(str);
 	ft_putchar('\n');

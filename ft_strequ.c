@@ -6,13 +6,13 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:55:55 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/29 12:07:18 by kfum             ###   ########.fr       */
+/*   Updated: 2021/12/08 11:46:50 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+int	ft_strequ(const char *s1, const char *s2)
 {
 	if (!s1 || !s2)
 	{

@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 13:27:44 by kfum              #+#    #+#             */
-/*   Updated: 2021/12/08 11:21:24 by kfum             ###   ########.fr       */
+/*   Created: 2021/12/08 11:05:38 by kfum              #+#    #+#             */
+/*   Updated: 2021/12/08 12:21:28 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+void	ft_strrev(char *str)
 {
-	size_t			i;
-	unsigned char	*p1;
-	unsigned char	*p2;
+	int		i;
+	int		j;
+	char	temp;
 
 	i = 0;
-	p1 = (unsigned char *) str1;
-	p2 = (unsigned char *) str2;
-	while (i < n)
+	j = ft_strlen(str);
+	while (i < j / 2)
 	{
-		if (p1[i] != p2[i])
-		{
-			return (p1[i] - p2[i]);
-		}
+		temp = str[i];
+		str[i] = str[j - i - 1];
+		str[j - i - 1] = temp;
 		i++;
 	}
-	return (0);
 }

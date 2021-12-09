@@ -6,12 +6,11 @@
 #    By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/19 11:01:05 by kfum              #+#    #+#              #
-#    Updated: 2021/11/25 14:37:55 by kfum             ###   ########.fr        #
+#    Updated: 2021/12/08 14:26:50 by kfum             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
@@ -75,6 +74,10 @@ FILES = ft_memset \
 		ft_lstadd \
 		ft_lstiter \
 		ft_lstmap \
+		ft_isspace \
+		ft_abs \
+		ft_strrev \
+		ft_swap
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
@@ -99,4 +102,4 @@ fclean: clean
 
 re: clean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all clean fclean re

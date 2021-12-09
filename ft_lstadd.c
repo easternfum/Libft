@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 11:08:27 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/25 11:56:53 by kfum             ###   ########.fr       */
+/*   Updated: 2021/12/07 11:55:29 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	new->next = *alst;
+	if (!alst || !new)
+	{
+		return ;
+	}
+	if (!*alst)
+	{
+		new->next = NULL;
+	}
+	else
+	{
+		new->next = *alst;
+	}	
 	*alst = new;
 }

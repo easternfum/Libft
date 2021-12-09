@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:54:50 by kfum              #+#    #+#             */
-/*   Updated: 2021/11/29 11:18:00 by kfum             ###   ########.fr       */
+/*   Updated: 2021/12/08 11:44:47 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *src)
 		return (NULL);
 	}
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		result[i] = src[i];
 		i++;
