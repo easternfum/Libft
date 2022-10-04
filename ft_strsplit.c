@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:58:28 by kfum              #+#    #+#             */
-/*   Updated: 2021/12/08 12:18:38 by kfum             ###   ########.fr       */
+/*   Updated: 2022/03/10 15:50:47 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ static char	*save_part(char const *str, char c)
 	return (result);
 }
 
-static char **free_part(char **buffer)
+static char	**free_part(char **buffer)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (buffer[i])
@@ -89,7 +89,7 @@ static char	*check_part(char **buffer, int i, char const *str, char c)
 			buffer[i] = save_part(str, c);
 			if (!buffer[i])
 			{
-				free_part(buffer[i]);
+				free_part(&buffer[i]);
 				return (NULL);
 			}
 			else

@@ -6,7 +6,7 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:08:37 by kfum              #+#    #+#             */
-/*   Updated: 2021/12/08 14:34:58 by kfum             ###   ########.fr       */
+/*   Updated: 2022/03/10 15:51:10 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_swap(void *value1, void *value2)
 {
-	void *temp;
+	void	*temp;
 
 	temp = value1;
 	value1 = value2;

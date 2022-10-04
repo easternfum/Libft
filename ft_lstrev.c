@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_lstrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 11:03:56 by kfum              #+#    #+#             */
-/*   Updated: 2022/03/09 16:03:09 by kfum             ###   ########.fr       */
+/*   Created: 2022/03/10 15:41:18 by kfum              #+#    #+#             */
+/*   Updated: 2022/03/10 15:41:41 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_abs(int x)
+void	ft_lstrev(t_list **alst)
 {
-	if (x < 0)
+	t_list	*prev;
+	t_list	*cur;
+	t_list	*next;
+
+	prev = NULL;
+	cur = *alst;
+	while (cur != NULL)
 	{
-		return (-x);
+		next = cur->next;
+		cur->next = prev;
+		prev = cur;
+		cur = next;
 	}
-	else
-	{
-		return (x);
-	}
+	*alst = prev;
 }

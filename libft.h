@@ -6,12 +6,14 @@
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:48:33 by kfum              #+#    #+#             */
-/*   Updated: 2021/12/08 14:28:31 by kfum             ###   ########.fr       */
+/*   Updated: 2022/09/12 14:44:38 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 8
+# define FD_SIZE 4096
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -96,14 +98,26 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+size_t	ft_lstcount(t_list *lst);
+void	ft_lstrev(t_list **alst);
 
 /*
-**************************OWN FUNCTION PART********************************************
+**************************OWN FUNCTION PART**************************************
 */
 
 int		ft_isspace(char c);
 int		ft_abs(int x);
 void	ft_strrev(char *str);
 void	ft_swap(void *v1, void *v2);
+int		ft_sqrt(int n);
+int		ft_count(char *s, char c);
+int		ft_search(char *s, int c);
+int		ft_map_check(char c);
+
+/*
+**************************GET NEXT LINE PART*************************************
+*/
+
+int		get_next_line(const int fd, char **line);
 
 #endif

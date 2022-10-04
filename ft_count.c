@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_count.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 11:03:56 by kfum              #+#    #+#             */
-/*   Updated: 2022/03/09 16:03:09 by kfum             ###   ########.fr       */
+/*   Created: 2022/09/06 11:07:37 by kfum              #+#    #+#             */
+/*   Updated: 2022/09/07 14:40:45 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_abs(int x)
+int	ft_count(char *s, char c)
 {
-	if (x < 0)
+	int	count;
+	int	i;
+
+	i = 0;
+	count = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
 	{
-		return (-x);
+		while (s[i] && s[i] != c)
+			i++;
+		while (s[i] && s[i] == c)
+			i++;
+		count++;
 	}
-	else
-	{
-		return (x);
-	}
+	return (count);
 }

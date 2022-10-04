@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_search.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 11:03:56 by kfum              #+#    #+#             */
-/*   Updated: 2022/03/09 16:03:09 by kfum             ###   ########.fr       */
+/*   Created: 2022/09/07 14:40:07 by kfum              #+#    #+#             */
+/*   Updated: 2022/09/09 09:56:39 by kfum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_abs(int x)
+int	ft_search(char *s, int c)
 {
-	if (x < 0)
+	int	count;
+	int	i;
+
+	i = 0;
+	count = 0;
+	while (s[i])
 	{
-		return (-x);
+		if (s[i] == c)
+			count++;
+		i++;
 	}
-	else
-	{
-		return (x);
-	}
+	return (count);
 }
