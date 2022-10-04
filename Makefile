@@ -63,4 +63,4 @@ re: clean all
 # Output colors
 DEFAULT	:=\033[0m
 GREEN	:=\033[0;32m
-RED		:=\033[0;31m
+RED	:=\033[0;31m
