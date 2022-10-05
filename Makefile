@@ -6,7 +6,7 @@
 #    By: kfum <kfum@student.hive.fi>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/19 11:01:05 by kfum              #+#    #+#              #
-#    Updated: 2022/10/04 11:04:57 by kfum             ###   ########.fr        #
+#    Updated: 2022/10/05 11:05:19 by kfum             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,14 +51,14 @@ all: $(NAME)
 clean:
 	@echo "$(RED)Cleaning libft .o files...$(DEFAULT)"
 	@$(RM) $(OBJS)
-	@echo "$(GREEN)DONE.$(DEFAULT)"
+	@echo "$(GREEN)DONE.\n$(DEFAULT)"
 
 fclean: clean
 	@echo "$(RED)Deleting $(NAME)...$(DEFAULT)" 
 	@$(RM) $(NAME)
-	@echo "$(GREEN)DONE.$(DEFAULT)"
+	@echo "$(GREEN)DONE.\n$(DEFAULT)"
 
-re: clean all
+re: fclean all
 
 # Output colors
 DEFAULT	:=\033[0m
